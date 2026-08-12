@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#6c2b86">
+<title>光エステ販買マスター</title>
+<link rel="manifest" href="manifest.webmanifest">
+<style>
+:root{--purple:#5b247a;--purple2:#7b3b93;--pink:#ed4f8f;--rose:#fff1f7;--gold:#d6a23b;--ink:#37233d;--muted:#746579;--card:#fff;--line:#ead9ec;--bg:#fbf6fc}
+*{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;background:linear-gradient(#f8eefb,#fff8fb 45%,#fff);color:var(--ink)}
+.app{max-width:980px;margin:0 auto;min-height:100vh;padding-bottom:88px}
+.hero{padding:22px 18px 18px;background:radial-gradient(circle at 80% 20%,#a866bd 0 6%,transparent 22%),linear-gradient(135deg,#3f175c,#6e2e86 52%,#b64d86);color:#fff;position:relative;overflow:hidden}
+.hero:after{content:"✦  ✧  ✦";position:absolute;right:18px;top:15px;font-size:28px;color:#f5d985;opacity:.9}
+.kicker{display:inline-block;background:#fff2b9;color:#5b247a;border-radius:999px;padding:7px 11px;font-weight:800;font-size:13px}
+h1{font-size:31px;margin:10px 0 4px;letter-spacing:.02em}.sub{opacity:.9;font-weight:650;line-height:1.55}
+.storephoto{margin-top:14px;width:100%;max-height:250px;object-fit:cover;border-radius:18px;border:2px solid rgba(255,255,255,.65)}
+main{padding:14px}.section{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;margin:13px 0;box-shadow:0 8px 28px rgba(90,38,110,.08)}
+.section h2{margin:0 0 12px;font-size:22px;color:#5b247a}.lead{margin:0 0 14px;color:var(--muted);line-height:1.6}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.choice,.card,.product{border:1px solid var(--line);border-radius:17px;background:linear-gradient(180deg,#fff,#fff9fc);padding:14px}
+.choice{cursor:pointer;text-align:left;min-height:112px}.choice b{display:block;font-size:17px;margin:6px 0}.icon{font-size:30px}.tag{display:inline-block;border-radius:999px;background:#fde3ef;color:#b52e68;padding:4px 8px;font-weight:800;font-size:12px;margin:2px}
+.reco{display:none;margin-top:14px;border-radius:18px;background:linear-gradient(135deg,#fff5c9,#fff,#ffe8f2);border:1px solid #e7cf8d;padding:14px}.reco.show{display:block}
+.reco h3{margin:2px 0 8px;color:#6a2a83}.reco ul{padding-left:18px;line-height:1.7}
+.products{display:grid;grid-template-columns:1fr;gap:10px}.product h3{margin:0 0 5px}.brand{font-weight:850;color:#6a2a83}.why{background:#f7effa;border-radius:12px;padding:10px;margin-top:10px;font-size:14px;line-height:1.5}
+.diagram{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}.step{padding:12px 8px;border-radius:16px;background:#fff4f8;border:1px solid #f0cfdf}.step .big{font-size:34px}.arrow{display:none}
+.tablewrap{overflow-x:auto;border-radius:14px;border:1px solid var(--line)}table{border-collapse:collapse;width:100%;min-width:760px;background:#fff}th,td{padding:11px;border-bottom:1px solid #eee;border-right:1px solid #eee;vertical-align:top;font-size:14px}th{background:#6a2a83;color:white;position:sticky;top:0}tr:last-child td{border-bottom:0}
+.talk{display:grid;gap:10px}.talk .card b{color:#b52e68}.notice{font-size:12px;color:#746579;line-height:1.6;background:#faf7fb;padding:10px;border-radius:12px}
+nav{position:fixed;z-index:5;left:50%;transform:translateX(-50%);bottom:0;width:min(980px,100%);background:rgba(255,255,255,.97);border-top:1px solid #e6d7e9;display:grid;grid-template-columns:repeat(5,1fr);padding:8px 4px calc(8px + env(safe-area-inset-bottom));backdrop-filter:blur(12px)}
+nav a{text-decoration:none;color:#66586a;text-align:center;font-size:11px;font-weight:750}nav span{display:block;font-size:20px;margin-bottom:2px}
+.version{font-size:12px;color:#8e7d92;text-align:center;margin:14px 0}
+@media(min-width:760px){main{padding:20px}.grid{grid-template-columns:repeat(4,1fr)}.products{grid-template-columns:repeat(2,1fr)}.diagram{grid-template-columns:repeat(5,1fr)}.hero{padding:28px 24px}.hero h1{font-size:40px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hero" id="home">
+  <span class="kicker">接客でそのまま使える</span>
+  <h1>光エステ販買マスター</h1>
+  <div class="sub">お悩み → 選ぶポイント → おすすめタイプ → 比較へ。<br>ノジマ売場で見せやすい、縦スクロール型の光美容器ガイド。</div>
+  <img class="storephoto" src="nojima_lineup.jpeg" alt="ノジマ売場の光美容器ラインアップ">
+</header>
+<main>
+<section class="section" id="chart">
+<h2>お悩み別チャート</h2>
+<p class="lead">お客様に「いちばん気になること」を1つ選んでもらうだけ。押すと、その場で見るポイントが出ます。</p>
+<div class="grid">
+<button class="choice" data-key="pain"><span class="icon">❄️</span><b>痛みが心配</b><small>刺激を抑えて続けたい</small></button>
+<button class="choice" data-key="speed"><span class="icon">⏱️</span><b>早く終わらせたい</b><small>全身ケアの時短重視</small></button>
+<button class="choice" data-key="beauty"><span class="icon">✨</span><b>美肌ケアもしたい</b><small>毛穴・透明感も気になる</small></button>
+<button class="choice" data-key="men"><span class="icon">🧔</span><b>男性・ヒゲにも</b><small>太い毛への対応を重視</small></button>
+<button class="choice" data-key="beginner"><span class="icon">🔰</span><b>初めてで不安</b><small>自動調整・使いやすさ重視</small></button>
+<button class="choice" data-key="vio"><span class="icon">🌷</span><b>VIOをケアしたい</b><small>対応部位と専用ヘッドを確認</small></button>
+<button class="choice" data-key="family"><span class="icon">👨‍👩‍👧</span><b>家族で使いたい</b><small>男女の対応・照射回数も確認</small></button>
+<button class="choice" data-key="simple"><span class="icon">👜</span><b>手軽さ優先</b><small>軽さ・操作性・準備の少なさ</small></button>
+</div>
+<div class="reco" id="reco"></div>
+</section>
+
+<section class="section" id="compare">
+<h2>写真に写っていた主力商品の見方</h2>
+<div class="products">
+<div class="product"><div class="brand">Panasonic</div><h3>ES-WG0B</h3><span class="tag">冷却×ハイパワー</span><span class="tag">ヒゲ・ワキ・VIO</span><div class="why">太い毛や刺激の感じ方を気にするお客様では、まず冷却とハイパワーモードの両立を確認する機種。</div></div>
+<div class="product"><div class="brand">Panasonic</div><h3>ES-WP9B</h3><span class="tag">美肌ケア</span><span class="tag">全身7分目安</span><div class="why">ムダ毛だけでなく毛穴の目立ちにくさや透明感不足まで気にするお客様に比較しやすい。</div></div>
+<div class="product"><div class="brand">BRAUN</div><h3>PL5231 / PL7387</h3><span class="tag">肌色に合わせ自動調整</span><span class="tag">全身10分目安</span><div class="why">「自分でレベル調整するのが不安」というお客様に、自動パワー調整の考え方を説明しやすい。</div></div>
+<div class="product"><div class="brand">ReFa</div><h3>RE-BD-02A / RE-BR-00A系</h3><span class="tag">冷却</span><span class="tag">美肌発想</span><div class="why">冷却による刺激対策と、美肌を意識したケアを同時に求めるお客様の比較候補。</div></div>
+<div class="product"><div class="brand">YA-MAN</div><h3>YJEA9N</h3><span class="tag">ハイパワー冷却</span><span class="tag">家族ケア</span><div class="why">パワー・冷却・スピードをバランスよく見たいお客様向け。家族利用の訴求もしやすい。</div></div>
+</div>
+</section>
+
+<section class="section" id="learn">
+<h2>IPLのしくみを図解</h2>
+<p class="lead">「抜く機械」ではなく、黒い色に反応する光を照射して、継続ケアでムダ毛を目立ちにくくしていく家庭用美容器。</p>
+<div class="diagram">
+<div class="step"><div class="big">💡</div><b>1. 光を照射</b><br><small>IPLの光を肌に当てる</small></div>
+<div class="step"><div class="big">⚫</div><b>2. 黒い色に反応</b><br><small>毛のメラニンへアプローチ</small></div>
+<div class="step"><div class="big">♨️</div><b>3. 熱へ変換</b><br><small>毛先へ熱エネルギー</small></div>
+<div class="step"><div class="big">🌱</div><b>4. 継続ケア</b><br><small>ムダ毛を目立ちにくく</small></div>
+<div class="step"><div class="big">✨</div><b>5. つるすべ感</b><br><small>機種により美肌ケアも</small></div>
+</div>
+</section>
+
+<section class="section">
+<h2>接客で使う比較表</h2>
+<div class="tablewrap"><table>
+<thead><tr><th>見るポイント</th><th>Panasonic ES-WG0B</th><th>Panasonic ES-WP9B</th><th>BRAUN PL5231/7387</th><th>ReFa</th><th>YA-MAN YJEA9N</th></tr></thead>
+<tbody>
+<tr><td>冷却</td><td>強み。クールプラスあり</td><td>冷却訴求より美肌・時短型</td><td>肌色自動調整が主軸</td><td>冷却搭載モデルあり</td><td>冷却搭載</td></tr>
+<tr><td>太い毛</td><td>ヒゲ・ワキ・VIOを公式に訴求</td><td>Vゾーンの太い毛を訴求</td><td>顔・体・VIO対応</td><td>機種ごとに対応確認</td><td>ハイパワー冷却を訴求</td></tr>
+<tr><td>美肌</td><td>美肌ケアも搭載</td><td>毛穴・透明感不足も訴求</td><td>主軸はムダ毛ケア</td><td>Gentle IPL等の美肌訴求あり</td><td>美肌光を訴求</td></tr>
+<tr><td>初心者</td><td>モードを理解して選ぶ</td><td>アタッチメント自動判別</td><td>肌色を読み自動パワー調整</td><td>機種によりモードが異なる</td><td>機種ごとのレベル・モード確認</td></tr>
+<tr><td>時短</td><td>スピードモードあり</td><td>全身7分の目安あり</td><td>全身10分の目安あり</td><td>高速連続照射モデルあり</td><td>高速ケアを訴求</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section" id="talk">
+<h2>そのまま使える接客の流れ</h2>
+<div class="talk">
+<div class="card"><b>① 悩みを1つ聞く</b><br>「痛み・時間・美肌・ヒゲ・VIOの中だと、どれが一番気になりますか？」</div>
+<div class="card"><b>② 違いを1個だけ説明</b><br>「痛みが気になるなら冷却、調整が不安なら自動パワー調整を見ると選びやすいです。」</div>
+<div class="card"><b>③ 2〜3台に絞る</b><br>全部を説明せず、お悩みに直結する機種だけを横並びで比較。</div>
+<div class="card"><b>④ 最後は使い方まで</b><br>「どの部位に、どのくらいの頻度で使いたいか」で最終判断。</div>
+</div>
+</section>
+
+<section class="section">
+<h2>安全・確認ポイント</h2>
+<p class="notice">使用可能部位、使用頻度、肌色・毛色の適否、日焼け時の扱い、VIO・顔・ヒゲの範囲、防水可否は機種ごとに異なります。接客時は必ず各メーカーの取扱説明書・公式仕様を優先してください。医療脱毛ではありません。</p>
+</section>
+<div class="version">光エステ販買マスター Ver. 1.0.0</div>
+</main>
+<nav>
+<a href="#home"><span>⌂</span>ホーム</a>
+<a href="#chart"><span>✿</span>お悩み</a>
+<a href="#compare"><span>▥</span>比較</a>
+<a href="#learn"><span>◎</span>図解</a>
+<a href="#talk"><span>♡</span>接客</a>
+</nav>
+</div>
+<script>
+const recos = {
+pain:["冷却機能を最優先で比較","Panasonic ES-WG0B、ReFaの冷却搭載機、YA-MAN冷却搭載機を候補に","刺激の感じ方には個人差があるので、冷却の有無だけで痛みゼロとは案内しない"],
+speed:["連続照射・全身ケア時間を比較","Panasonic ES-WP9Bは全身7分の目安、BRAUN Pro5/Pro7は全身10分の目安を公式に案内","照射時間の条件・レベルによって変わることを添える"],
+beauty:["ムダ毛＋美肌機能を比較","Panasonic ES-WP9Bは毛穴の目立ちにくさ・透明感不足への訴求が明確","ReFaやYA-MANも美肌訴求のあるモデルを機種別に比較"],
+men:["ヒゲ対応・太い毛への設計を確認","Panasonic ES-WG0Bは男性のヒゲ、ワキ・VIOの太い毛を公式に訴求","BRAUN PL7387も男女使用を公式に訴求"],
+beginner:["肌色検知や自動調整を比較","BRAUNは肌色を読み取り自動で照射パワーを調整","『何も考えず安全』ではなく、取扱説明書どおりの使用が前提"],
+vio:["V/I/Oそれぞれの対応範囲とアタッチメントを確認","PanasonicはI・Oゾーン用アタッチメントを用意するモデルあり","メーカーごとに使用禁止部位が違うので、型番ごとの確認が必須"],
+family:["男女の使用可否と対応部位を確認","YA-MANは家族みんなのムダ毛ケアを訴求するモデルあり","年齢制限やヒゲ・VIOの扱いは機種ごとに確認"],
+simple:["重量・コード・アタッチメント数・自動調整を比較","最初に『どこを一番ケアしたいか』を絞ると、必要な機能だけで選びやすい","機能が多い＝その人に最適、とは限らない"]
+};
+document.querySelectorAll(".choice").forEach(btn=>{
+ btn.addEventListener("click",()=>{
+   const r=recos[btn.dataset.key];
+   const box=document.getElementById("reco");
+   box.innerHTML=`<h3>おすすめの見方</h3><ul>${r.map(x=>`<li>${x}</li>`).join("")}</ul><div class="notice">この結果は接客の絞り込み用。最終判断は型番ごとの公式仕様・取扱説明書で確認してください。</div>`;
+   box.classList.add("show");
+   box.scrollIntoView({behavior:"smooth",block:"nearest"});
+ });
+});
+if("serviceWorker" in navigator){navigator.serviceWorker.register("sw.js").catch(()=>{});}
+</script>
+</body></html>
