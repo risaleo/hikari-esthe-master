@@ -1,15 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 <defs>
 <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-<stop stop-color="#3c1158"/><stop offset=".5" stop-color="#8a3aa1"/><stop offset="1" stop-color="#f06aa3"/>
+<stop stop-color="#34104e"/><stop offset=".5" stop-color="#8c35a2"/><stop offset="1" stop-color="#f1639f"/>
+</linearGradient>
+<linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+<stop stop-color="#ffffff"/><stop offset="1" stop-color="#ece7ef"/>
+</linearGradient>
+<linearGradient id="s" x1="0" y1="0" x2="1" y2="1">
+<stop stop-color="#9fe3ff"/><stop offset="1" stop-color="#d27bef"/>
 </linearGradient>
 </defs>
 <rect width="512" height="512" rx="112" fill="url(#g)"/>
-<circle cx="256" cy="238" r="145" fill="#fff7fb"/>
-<path d="M168 286c47-14 62-60 66-118 43 30 69 80 103 124-47 30-111 28-169-6z" fill="#f16fa7"/>
-<circle cx="222" cy="216" r="14" fill="#6e2a87"/><circle cx="292" cy="216" r="14" fill="#6e2a87"/>
-<path d="M220 268c25 19 49 19 73 0" fill="none" stroke="#6e2a87" stroke-width="11" stroke-linecap="round"/>
-<path d="M385 86l10 28 28 10-28 10-10 28-10-28-28-10 28-10z" fill="#ffe78f"/>
-<path d="M150 86l8 23 23 8-23 8-8 23-8-23-23-8 23-8z" fill="#fff"/>
-<text x="256" y="438" text-anchor="middle" font-size="54" font-weight="800" fill="#fff" font-family="sans-serif">光エステ</text>
+<circle cx="102" cy="102" r="22" fill="#ffe8a3"/><circle cx="432" cy="136" r="12" fill="#ffd5ea"/>
+<path d="M371 84l10 28 28 10-28 10-10 28-10-28-28-10 28-10z" fill="#ffe8a3"/>
+<ellipse cx="226" cy="262" rx="102" ry="126" fill="#fff7fb"/>
+<path d="M174 222c9-48 37-73 77-73 26 0 46 15 55 38-18-9-38-12-58-6-25 8-39 25-74 41z" fill="#7d4a3d"/>
+<circle cx="208" cy="232" r="7" fill="#5c352d"/><circle cx="252" cy="232" r="7" fill="#5c352d"/>
+<path d="M208 265c12 10 31 10 43 0" fill="none" stroke="#d07e98" stroke-width="6" stroke-linecap="round"/>
+<path d="M144 374c18-52 60-76 103-76 43 0 85 24 103 76" fill="#f4cfe1"/>
+<g transform="translate(294,128) rotate(18)">
+  <rect x="0" y="0" width="88" height="188" rx="30" fill="url(#m)" stroke="#d8d0db"/>
+  <rect x="18" y="18" width="52" height="100" rx="22" fill="url(#s)"/>
+  <circle cx="44" cy="150" r="10" fill="#f0c24f"/>
+  <rect x="24" y="138" width="40" height="24" rx="12" fill="#fff"/>
+</g>
+<text x="256" y="458" text-anchor="middle" font-size="50" font-weight="800" fill="#fff" font-family="sans-serif">光エステ</text>
 </svg>

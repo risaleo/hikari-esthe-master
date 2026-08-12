@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#fff8fc"/><stop offset="1" stop-color="#ffe8f3"/>
+  </linearGradient>
+  <linearGradient id="dress" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#f39abb"/><stop offset="1" stop-color="#d367a1"/>
+  </linearGradient>
+</defs>
+<rect width="900" height="420" rx="26" fill="url(#bg)"/>
+<circle cx="730" cy="70" r="26" fill="#ffe6a8"/><circle cx="770" cy="110" r="10" fill="#ffd9f0"/><circle cx="120" cy="70" r="16" fill="#fce0ee"/>
+<text x="52" y="74" font-size="54" font-weight="700" fill="#7a2c98">光エステ販買マスター</text>
+<text x="58" y="116" font-size="28" font-weight="700" fill="#dd5a97">わかる・伝わる・売れる</text>
+<g transform="translate(38,160)">
+  <rect x="0" y="0" width="410" height="190" rx="24" fill="#fff" stroke="#efd3df"/>
+  <g transform="translate(28,22)">
+    <rect x="0" y="0" width="96" height="64" rx="16" fill="#fff4f8" stroke="#efd3df"/>
+    <text x="48" y="28" text-anchor="middle" font-size="26">❄️</text>
+    <text x="48" y="52" text-anchor="middle" font-size="16" fill="#7a2c98">痛みが心配</text>
+    <rect x="130" y="0" width="96" height="64" rx="16" fill="#fff4f8" stroke="#efd3df"/>
+    <text x="178" y="28" text-anchor="middle" font-size="26">⏱️</text>
+    <text x="178" y="52" text-anchor="middle" font-size="16" fill="#7a2c98">早く終わる</text>
+    <rect x="260" y="0" width="96" height="64" rx="16" fill="#fff4f8" stroke="#efd3df"/>
+    <text x="308" y="28" text-anchor="middle" font-size="26">✨</text>
+    <text x="308" y="52" text-anchor="middle" font-size="16" fill="#7a2c98">美肌ケア</text>
+    <path d="M48 86v22h130v18" fill="none" stroke="#da6aa3" stroke-width="5"/>
+    <path d="M178 86v22" fill="none" stroke="#8d73d6" stroke-width="5"/>
+    <path d="M308 86v22h-130" fill="none" stroke="#f1b658" stroke-width="5"/>
+    <rect x="120" y="128" width="116" height="42" rx="20" fill="#f8f3ff" stroke="#cdb9ed"/>
+    <text x="178" y="154" text-anchor="middle" font-size="18" fill="#7a2c98">おすすめ結果へ</text>
+  </g>
+</g>
+<g transform="translate(560,88)">
+  <circle cx="118" cy="86" r="58" fill="#ffe4ef"/>
+  <path d="M118 144c-40 0-68 18-78 54h156c-10-36-38-54-78-54z" fill="url(#dress)"/>
+  <circle cx="118" cy="90" r="44" fill="#f7d3c1"/>
+  <path d="M82 92c2-41 28-64 57-64 20 0 36 12 41 32-15-8-30-10-45-5-19 7-27 18-53 37z" fill="#7c493a"/>
+  <circle cx="102" cy="92" r="4.8" fill="#5f372f"/><circle cx="134" cy="92" r="4.8" fill="#5f372f"/>
+  <path d="M102 112c9 8 22 8 31 0" fill="none" stroke="#cf7892" stroke-width="4" stroke-linecap="round"/>
+  <rect x="210" y="40" width="86" height="136" rx="16" fill="#5c4965"/>
+  <rect x="219" y="50" width="68" height="116" rx="10" fill="#c9d9ea"/>
+  <circle cx="253" cy="154" r="6" fill="#fff"/>
+</g>
+</svg>

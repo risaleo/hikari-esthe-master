@@ -3,236 +3,345 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#6d2b8f">
+<meta name="theme-color" content="#6c1d7e">
 <title>光エステ販買マスター</title>
 <link rel="manifest" href="manifest.webmanifest">
 <style>
 :root{
-  --ink:#36223b;--purple:#5a1977;--purple2:#7f36a2;--pink:#f35b9b;--rose:#fff2f8;
-  --gold:#d4a842;--line:#ecd8ed;--muted:#756778;--card:#fff;
+  --purple:#56166f;--purple2:#7f2c9a;--pink:#ef5d9a;--pink2:#ff9cc8;--gold:#d9ab45;
+  --ink:#39233f;--muted:#78697b;--card:#ffffff;--line:#ecd7ed;--bg:#fff9fc;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;color:var(--ink);
-background:radial-gradient(circle at 10% 0,#ffe7f3 0 7%,transparent 28%),linear-gradient(#f7ecfb,#fff9fc 48%,#fff)}
-.app{max-width:1024px;margin:auto;padding-bottom:92px}
-.hero{position:relative;overflow:hidden;padding:28px 18px 22px;background:
-radial-gradient(circle at 82% 18%,rgba(255,255,255,.25) 0 7%,transparent 28%),
-linear-gradient(135deg,#3d1158,#702386 54%,#c44e89);color:#fff}
-.hero:before{content:"✦ ✧ ✦";position:absolute;right:18px;top:10px;color:#ffe8a3;font-size:30px;letter-spacing:8px}
-.crown{font-size:34px}
-.hero h1{margin:6px 0 4px;font-size:36px;letter-spacing:.02em}
-.edition{display:inline-block;background:linear-gradient(90deg,#f9bdd6,#fff1c1);color:#6a2a83;border-radius:999px;padding:7px 14px;font-weight:900}
-.hero p{margin:12px 0 0;line-height:1.7;font-weight:700}
-.heroart{margin-top:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
-.beauty{border-radius:22px;padding:18px;background:linear-gradient(135deg,#fff,#fff4f9);color:var(--ink);border:1px solid rgba(255,255,255,.65);box-shadow:0 10px 28px rgba(0,0,0,.08)}
-.device-row{display:flex;gap:12px;align-items:flex-end;justify-content:center;height:190px}
-.device{width:60px;border-radius:26px 26px 18px 18px;background:linear-gradient(180deg,#fff,#ece7ef);border:1px solid #ddd;box-shadow:0 12px 20px rgba(81,37,95,.15);position:relative}
-.device:after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:12px;width:14px;height:58%;border-radius:999px;background:linear-gradient(#8ed8ff,#c77ae5)}
-.d1{height:165px}.d2{height:178px}.d3{height:150px}.d4{height:160px}
-.sparkle{font-size:48px;color:#ef8ab2;text-align:center}
-.hero-copy{font-size:18px;line-height:1.7}
-main{padding:16px}
-.section{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:24px;padding:17px;margin:14px 0;box-shadow:0 10px 30px rgba(86,34,101,.08)}
+background:
+radial-gradient(circle at 8% 0,#ffe3f0 0 6%,transparent 25%),
+radial-gradient(circle at 100% 20%,#f5e3ff 0 7%,transparent 24%),
+linear-gradient(#f8eefb,#fff9fc 48%,#fff);}
+.app{max-width:1100px;margin:auto;padding-bottom:94px}
+.hero{
+  position:relative;overflow:hidden;color:#fff;padding:28px 18px 20px;
+  background:
+  radial-gradient(circle at 85% 15%,rgba(255,255,255,.22) 0 7%,transparent 26%),
+  linear-gradient(135deg,#33104f,#702688 56%,#d45490);
+}
+.hero:before{content:"✦ ✦ ✧";position:absolute;right:16px;top:10px;font-size:26px;color:#ffe9a8;letter-spacing:5px}
+.toprow{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero h1{margin:0;font-size:36px;letter-spacing:.02em}
+.ribbon{display:inline-block;background:linear-gradient(90deg,#ffd0e3,#fff1bd);color:#6a2682;border-radius:999px;padding:8px 14px;font-weight:900}
+.sub{margin-top:12px;line-height:1.7;font-weight:700}
+.hero-panels{margin-top:18px;display:grid;grid-template-columns:1fr;gap:12px}
+.hero-card{
+  border:1px solid rgba(255,255,255,.3);border-radius:22px;padding:16px;
+  background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.08));
+  backdrop-filter:blur(8px);
+}
+.quick-icons{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.quick-icons .qi{background:rgba(255,255,255,.92);color:#6d2b83;border-radius:18px;padding:12px;text-align:center;font-size:13px;font-weight:800}
+.quick-icons .qi span{display:block;font-size:24px;margin-bottom:5px}
+main{padding:14px}
+.section{
+  background:rgba(255,255,255,.98);border:1px solid var(--line);border-radius:24px;
+  padding:16px;margin:14px 0;box-shadow:0 10px 30px rgba(86,34,101,.08)
+}
 .section h2{margin:0 0 12px;color:#5d1e7d;font-size:23px}
-.lead{color:var(--muted);line-height:1.7;margin:0 0 14px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
-.choice{border:1px solid var(--line);background:linear-gradient(180deg,#fff,#fff7fb);border-radius:18px;padding:14px;min-height:125px;text-align:left;cursor:pointer}
-.choice:hover{transform:translateY(-1px)}
-.choice .ico{font-size:32px}
-.choice b{display:block;font-size:17px;margin:8px 0 4px}
-.reco{display:none;margin-top:15px;border:1px solid #ebcc7d;border-radius:18px;background:linear-gradient(135deg,#fff8d8,#fff,#ffe7f2);padding:15px}
+.lead{margin:0 0 14px;color:var(--muted);line-height:1.7}
+.grid4,.grid3,.grid2{display:grid;gap:11px}
+.grid4{grid-template-columns:repeat(2,1fr)}
+.grid3{grid-template-columns:1fr}
+.grid2{grid-template-columns:1fr}
+.choice,.mini,.card,.faq,.check,.talkbox{
+  border:1px solid var(--line);background:linear-gradient(180deg,#fff,#fff7fb);border-radius:18px;padding:14px
+}
+.choice{cursor:pointer;min-height:124px;text-align:left}
+.choice .ico{font-size:31px}
+.choice b{display:block;font-size:17px;margin:7px 0 4px}
+.reco{
+  display:none;margin-top:14px;border:1px solid #ebcc7d;border-radius:18px;padding:15px;
+  background:linear-gradient(135deg,#fff8d6,#fff,#ffe6f2)
+}
 .reco.show{display:block}
-.reco h3{margin:0 0 8px;color:#6c2b86}
-.cards{display:grid;grid-template-columns:1fr;gap:11px}
-.card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(#fff,#fff8fc);padding:14px}
-.card h3{margin:0 0 7px}
-.tag{display:inline-block;margin:2px;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:900;background:#fde2ee;color:#ba336d}
-.badge{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#f6d778;color:#6b2d83;font-weight:900;margin-right:7px}
-.compare-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line)}
-table{width:100%;min-width:820px;border-collapse:collapse;background:#fff}
+.reco h3{margin:0 0 8px;color:#6b2a84}
+.tag{display:inline-block;background:#fde1ee;color:#b13069;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:900;margin:2px}
+.rank{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;font-weight:900;margin-right:8px}
+.r1{background:#f6de88;color:#825a00}.r2{background:#e4e4ea;color:#555}.r3{background:#f1c1a4;color:#6b351c}
+.devices{display:grid;grid-template-columns:1fr;gap:11px}
+.devicecard{border:1px solid var(--line);border-radius:20px;padding:14px;background:linear-gradient(180deg,#fff,#fffafc)}
+.device-head{display:flex;gap:12px;align-items:center}
+.device-ill{width:72px;height:140px;border-radius:28px 28px 18px 18px;background:linear-gradient(180deg,#fff,#ece7ef);border:1px solid #ddd;box-shadow:0 12px 20px rgba(81,37,95,.12);position:relative;flex:0 0 auto}
+.device-ill:after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:10px;width:16px;height:62%;border-radius:999px;background:linear-gradient(#91d8ff,#c977e6)}
+.starline{letter-spacing:2px;color:#f2bf4b}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+table{width:100%;min-width:860px;border-collapse:collapse;background:#fff}
 th,td{padding:11px;border-right:1px solid #eee;border-bottom:1px solid #eee;font-size:14px;vertical-align:top}
-th{background:#652083;color:#fff}
-.diagram{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
-.step{text-align:center;background:#fff5fa;border:1px solid #efcede;border-radius:16px;padding:10px}
-.step .big{font-size:34px}
+th{background:#642082;color:#fff}
+.diagram5{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.step{border:1px solid #efd3df;border-radius:18px;background:#fff5fa;padding:12px;text-align:center}
+.step .big{font-size:33px}
+.flow{display:grid;grid-template-columns:1fr;gap:10px}
+.flow .mini b{color:#b23069}
 .bodygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-.bodypart{border-radius:16px;border:1px solid var(--line);padding:12px;background:#fff}
-.bodypart b{color:#a82f67}
-.talk{display:grid;gap:10px}
-.talk .card b{color:#b6326e}
-.checks{display:grid;gap:9px}.check{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:11px;background:#fff}
-.check .n{min-width:30px;height:30px;border-radius:50%;background:#f4d3e4;display:grid;place-items:center;font-weight:900;color:#802f94}
+.body-img{width:100%;border:1px solid var(--line);border-radius:18px;background:#fff}
+.checklist{display:grid;gap:10px}
+.check{display:flex;gap:10px;align-items:flex-start}
+.check .num{min-width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#f4d4e4;color:#822f94;font-weight:900}
+.talkgrid,.faqgrid{display:grid;gap:10px}
+.talkbox b{color:#b22d68}
 .memo{display:grid;grid-template-columns:1fr;gap:10px}
-.memo textarea{width:100%;min-height:140px;border:1px solid var(--line);border-radius:14px;padding:12px;font:inherit;background:#fff}
-.btn{display:inline-block;border:0;border-radius:999px;background:linear-gradient(90deg,#ef4f94,#d83f8a);color:#fff;padding:12px 18px;font-weight:900}
-.notice{font-size:12px;color:#716277;line-height:1.65;background:#faf7fb;padding:11px;border-radius:13px}
-.version{text-align:center;color:#8c7c90;font-size:12px;margin:15px 0}
-nav{position:fixed;z-index:10;left:50%;bottom:0;transform:translateX(-50%);width:min(1024px,100%);display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #e5d6e8;padding:8px 4px calc(8px + env(safe-area-inset-bottom))}
-nav a{text-align:center;text-decoration:none;color:#655769;font-size:11px;font-weight:800}
+.memo textarea{width:100%;min-height:170px;border-radius:14px;border:1px solid var(--line);padding:12px;font:inherit;background:#fff}
+.btn{border:0;border-radius:999px;padding:12px 18px;background:linear-gradient(90deg,#ef4f94,#d83f8a);color:#fff;font-weight:900}
+.notice{font-size:12px;color:#736476;line-height:1.65;background:#faf7fb;padding:11px;border-radius:13px}
+.version{font-size:12px;color:#8a7b8e;text-align:center;margin:15px 0}
+nav{
+  position:fixed;z-index:10;left:50%;bottom:0;transform:translateX(-50%);
+  width:min(1100px,100%);display:grid;grid-template-columns:repeat(5,1fr);
+  background:rgba(255,255,255,.98);border-top:1px solid #e5d5e8;padding:8px 4px calc(8px + env(safe-area-inset-bottom));
+  backdrop-filter:blur(12px)
+}
+nav a{text-decoration:none;text-align:center;color:#66576a;font-size:11px;font-weight:800}
 nav span{display:block;font-size:21px;margin-bottom:2px}
 @media(min-width:760px){
-  main{padding:22px}.grid{grid-template-columns:repeat(4,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.bodygrid{grid-template-columns:repeat(4,1fr)}
-  .memo{grid-template-columns:1fr 1fr}.hero{padding:34px 26px}.hero h1{font-size:44px}
+  .hero{padding:34px 26px 22px}.hero h1{font-size:44px}
+  .hero-panels{grid-template-columns:1.1fr .9fr}
+  .grid4{grid-template-columns:repeat(4,1fr)}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  .grid2{grid-template-columns:repeat(2,1fr)}
+  .devices{grid-template-columns:repeat(2,1fr)}
+  .diagram5{grid-template-columns:repeat(5,1fr)}
+  .flow{grid-template-columns:repeat(4,1fr)}
+  .bodygrid{grid-template-columns:1.1fr .9fr}
+  .talkgrid,.faqgrid{grid-template-columns:repeat(2,1fr)}
+  .memo{grid-template-columns:.9fr 1.1fr}
 }
 </style>
 </head>
 <body>
 <div class="app">
 <header class="hero" id="home">
-  <div class="crown">♛</div>
-  <h1>光エステ販買マスター</h1>
-  <div class="edition">Risa Edition</div>
-  <p>お悩み・比較・図解・接客まで、この1つで。<br>写真を使わず、華やかな図解中心で見せやすく。</p>
-  <div class="heroart">
-    <div class="beauty">
-      <div class="sparkle">✦ ✨ ✦</div>
-      <div class="hero-copy"><b>接客でそのまま使える</b><br>「何が気になる？」から始めて、比較 → 理由 → 提案まで迷わない。</div>
+  <div class="toprow">
+    <div>
+      <h1>光エステ販買マスター</h1>
+      <div class="ribbon">Risa Edition</div>
     </div>
-    <div class="beauty">
-      <div class="device-row">
-        <div class="device d1"></div><div class="device d2"></div><div class="device d3"></div><div class="device d4"></div>
+  </div>
+  <div class="sub">図解を増やして、もっと見やすく。<br>お悩み → 比較 → 使い方 → 接客トークまで、この1つで案内しやすい完成版。</div>
+  <div class="hero-panels">
+    <div class="hero-card">
+      <img src="hero_beauty.svg" alt="光エステ販買マスターのキービジュアル" style="width:100%;display:block;border-radius:18px">
+    </div>
+    <div class="hero-card">
+      <div style="font-weight:900;font-size:18px;margin-bottom:8px">よく使う入口</div>
+      <div class="quick-icons">
+        <div class="qi"><span>✿</span>お悩み</div>
+        <div class="qi"><span>▥</span>比較</div>
+        <div class="qi"><span>◎</span>図解</div>
+        <div class="qi"><span>♡</span>接客</div>
       </div>
+      <div style="margin-top:14px;font-weight:800;line-height:1.7">売場で見せやすい縦スクロール型。<br>iPhone・iPadどちらでも見やすく調整。</div>
     </div>
   </div>
 </header>
 
 <main>
 <section class="section" id="chart">
-<h2>1. お悩み別チャート</h2>
-<p class="lead">お客様の気になることを1つタップ。見るべき機能と比較ポイントをすぐ表示します。</p>
-<div class="grid">
-<button class="choice" data-key="pain"><span class="ico">❄️</span><b>痛みが心配</b><small>冷却・肌へのやさしさ重視</small></button>
-<button class="choice" data-key="speed"><span class="ico">⏱️</span><b>早く終わらせたい</b><small>連続照射・時短重視</small></button>
-<button class="choice" data-key="beauty"><span class="ico">✨</span><b>美肌ケアもしたい</b><small>ムダ毛＋美肌機能</small></button>
-<button class="choice" data-key="men"><span class="ico">🧔</span><b>男性・ヒゲにも</b><small>太い毛・対応部位重視</small></button>
-<button class="choice" data-key="beginner"><span class="ico">🔰</span><b>初めてで不安</b><small>自動調整・操作性重視</small></button>
-<button class="choice" data-key="vio"><span class="ico">🌷</span><b>VIOをケアしたい</b><small>対応部位・専用ヘッド確認</small></button>
-<button class="choice" data-key="family"><span class="ico">👨‍👩‍👧</span><b>家族で使いたい</b><small>男女対応・使いやすさ</small></button>
-<button class="choice" data-key="simple"><span class="ico">👜</span><b>手軽さ優先</b><small>軽さ・準備の少なさ</small></button>
-</div>
-<div id="reco" class="reco"></div>
+  <h2>1. お悩み別チャート</h2>
+  <p class="lead">お客様に「いちばん気になること」を1つ選んでもらうだけ。見るポイントがすぐ出ます。</p>
+  <div class="grid4">
+    <button class="choice" data-key="pain"><span class="ico">❄️</span><b>痛みが心配</b><small>冷却・やさしさ重視</small></button>
+    <button class="choice" data-key="speed"><span class="ico">⏱️</span><b>早く終わらせたい</b><small>時短・連続照射重視</small></button>
+    <button class="choice" data-key="beauty"><span class="ico">✨</span><b>美肌ケアもしたい</b><small>ムダ毛＋美肌</small></button>
+    <button class="choice" data-key="men"><span class="ico">🧔</span><b>男性・ヒゲにも</b><small>太い毛・パワー</small></button>
+    <button class="choice" data-key="beginner"><span class="ico">🔰</span><b>初めてで不安</b><small>自動調整・安心感</small></button>
+    <button class="choice" data-key="vio"><span class="ico">🌷</span><b>VIOをケアしたい</b><small>部位対応・専用ヘッド</small></button>
+    <button class="choice" data-key="family"><span class="ico">👨‍👩‍👧</span><b>家族で使いたい</b><small>共有しやすさ</small></button>
+    <button class="choice" data-key="simple"><span class="ico">👜</span><b>手軽さ優先</b><small>軽さ・準備の少なさ</small></button>
+  </div>
+  <div class="reco" id="reco"></div>
 </section>
 
 <section class="section" id="compare">
-<h2>2. メーカー・機種比較</h2>
-<div class="cards">
-<div class="card"><h3><span class="badge">1</span>Panasonic</h3><span class="tag">冷却</span><span class="tag">ハイパワー</span><span class="tag">美肌</span><p>太い毛や刺激対策を重視するお客様に比較しやすい。ES-WG0B系は冷却とハイパワーの両立を訴求しやすい。</p></div>
-<div class="card"><h3><span class="badge">2</span>YA-MAN</h3><span class="tag">冷却</span><span class="tag">スピード</span><span class="tag">美肌</span><p>冷却・スピード・美肌機能のバランスで案内しやすい。家族利用を意識した比較にも向く。</p></div>
-<div class="card"><h3><span class="badge">3</span>BRAUN</h3><span class="tag">自動調整</span><span class="tag">初心者</span><span class="tag">ヒゲ</span><p>肌色を見ながら自動調整する考え方が分かりやすく、「自分で設定するのが不安」な方に提案しやすい。</p></div>
-<div class="card"><h3><span class="badge">4</span>ReFa</h3><span class="tag">冷却</span><span class="tag">やさしさ</span><span class="tag">美肌発想</span><p>刺激を抑えながら美容感も重視したい方の比較候補。モデルごとの差は必ず型番ごとに確認。</p></div>
-</div>
-
-<div class="compare-wrap" style="margin-top:12px"><table>
-<thead><tr><th>見るポイント</th><th>Panasonic</th><th>YA-MAN</th><th>BRAUN</th><th>ReFa</th></tr></thead>
-<tbody>
-<tr><td>冷却</td><td>強みのモデルあり</td><td>冷却搭載モデルあり</td><td>主軸は自動パワー調整</td><td>冷却搭載モデルあり</td></tr>
-<tr><td>時短</td><td>スピードモード系あり</td><td>高速ケア訴求あり</td><td>全身ケア時間の目安あり</td><td>高速連続照射系あり</td></tr>
-<tr><td>美肌</td><td>美肌機能搭載モデルあり</td><td>美肌光などを訴求</td><td>ムダ毛ケア中心</td><td>美肌発想の訴求あり</td></tr>
-<tr><td>初心者</td><td>モード・アタッチメントで選択</td><td>モード設計を確認</td><td>自動調整が分かりやすい</td><td>モデルごとの操作性確認</td></tr>
-<tr><td>VIO・ヒゲ</td><td>対応モデルあり</td><td>モデル別に確認</td><td>対応モデルあり</td><td>モデル別に確認</td></tr>
-</tbody></table></div>
+  <h2>2. おすすめTOP & メーカー比較</h2>
+  <div class="devices">
+    <div class="devicecard">
+      <div class="device-head">
+        <div class="device-ill"></div>
+        <div><div><span class="rank r1">1</span><b>Panasonic</b></div><h3 style="margin:7px 0">ES-WG0B系</h3><span class="tag">冷却</span><span class="tag">ハイパワー</span><span class="tag">美肌</span><div class="starline">★★★★★</div></div>
+      </div>
+      <p>刺激対策を気にしながら、太い毛や美肌ケアも見たい方に比較しやすい主力候補。</p>
+    </div>
+    <div class="devicecard">
+      <div class="device-head">
+        <div class="device-ill" style="height:145px"></div>
+        <div><div><span class="rank r2">2</span><b>YA-MAN</b></div><h3 style="margin:7px 0">YJEA9N系</h3><span class="tag">冷却</span><span class="tag">スピード</span><span class="tag">家族使い</span><div class="starline">★★★★☆</div></div>
+      </div>
+      <p>冷却・時短・美肌のバランスで案内しやすい。家族で使いたいニーズにも合わせやすい。</p>
+    </div>
+    <div class="devicecard">
+      <div class="device-head">
+        <div class="device-ill" style="height:132px"></div>
+        <div><div><span class="rank r3">3</span><b>BRAUN</b></div><h3 style="margin:7px 0">PL5231 / PL7387</h3><span class="tag">自動調整</span><span class="tag">初心者</span><span class="tag">ヒゲ</span><div class="starline">★★★★☆</div></div>
+      </div>
+      <p>肌色に合わせた自動調整の説明がしやすく、初めての方でも比較しやすい。</p>
+    </div>
+    <div class="devicecard">
+      <div class="device-head">
+        <div class="device-ill" style="height:138px"></div>
+        <div><div><span class="rank r3" style="background:#f3d8f1;color:#914294">4</span><b>ReFa</b></div><h3 style="margin:7px 0">冷却搭載モデル</h3><span class="tag">やさしさ</span><span class="tag">美肌発想</span><span class="tag">華やか</span><div class="starline">★★★★☆</div></div>
+      </div>
+      <p>やさしい使い心地や美容感のある見せ方を重視したい方の比較候補。</p>
+    </div>
+  </div>
+  <div class="tablewrap" style="margin-top:12px">
+    <table>
+      <thead><tr><th>見るポイント</th><th>Panasonic</th><th>YA-MAN</th><th>BRAUN</th><th>ReFa</th></tr></thead>
+      <tbody>
+        <tr><td>冷却</td><td>冷却を強く訴求するモデルあり</td><td>冷却搭載モデルあり</td><td>主軸は自動調整</td><td>冷却搭載モデルあり</td></tr>
+        <tr><td>時短</td><td>スピードモード系あり</td><td>高速ケア訴求あり</td><td>全身ケア時間の目安あり</td><td>高速連続照射系あり</td></tr>
+        <tr><td>美肌</td><td>美肌機能搭載モデルあり</td><td>美肌光などの訴求あり</td><td>ムダ毛ケア中心</td><td>美肌発想の訴求あり</td></tr>
+        <tr><td>初心者</td><td>モード理解で選びやすい</td><td>モード設計を確認</td><td>自動調整が分かりやすい</td><td>モデルごとの操作性確認</td></tr>
+        <tr><td>VIO・ヒゲ</td><td>対応モデルあり</td><td>モデル別に確認</td><td>対応モデルあり</td><td>モデル別に確認</td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section class="section" id="learn">
-<h2>3. IPLのしくみ</h2>
-<p class="lead">言葉だけでなく、流れで理解する図解。</p>
-<div class="diagram">
-<div class="step"><div class="big">💡</div><b>光を照射</b><br><small>肌にIPL光</small></div>
-<div class="step"><div class="big">⚫</div><b>黒い色に反応</b><br><small>メラニンへ</small></div>
-<div class="step"><div class="big">♨️</div><b>熱へ変換</b><br><small>毛へ熱エネルギー</small></div>
-<div class="step"><div class="big">📅</div><b>継続ケア</b><br><small>定期的に使用</small></div>
-<div class="step"><div class="big">✨</div><b>目立ちにくく</b><br><small>つるすべ感へ</small></div>
-</div>
+  <h2>3. IPLのしくみ図解</h2>
+  <p class="lead">言葉だけでなく、流れで説明できる図解を追加しました。</p>
+  <img src="ipl_diagram.svg" alt="IPLのしくみ図解" style="width:100%;display:block;border-radius:18px;border:1px solid var(--line)">
+  <div class="diagram5" style="margin-top:12px">
+    <div class="step"><div class="big">💡</div><b>光を照射</b><br><small>IPL光をあてる</small></div>
+    <div class="step"><div class="big">⚫</div><b>黒い色に反応</b><br><small>メラニンへ反応</small></div>
+    <div class="step"><div class="big">♨️</div><b>熱エネルギー</b><br><small>毛へアプローチ</small></div>
+    <div class="step"><div class="big">📅</div><b>継続ケア</b><br><small>定期的に使う</small></div>
+    <div class="step"><div class="big">✨</div><b>目立ちにくく</b><br><small>つるすべ感へ</small></div>
+  </div>
 </section>
 
 <section class="section">
-<h2>4. 部位別 使い方ガイド</h2>
-<div class="bodygrid">
-<div class="bodypart"><b>顔</b><br>顔対応の可否と専用アタッチメントを確認。目の周りなど使用不可部位に注意。</div>
-<div class="bodypart"><b>ワキ</b><br>シェービング後、肌に密着させて照射。刺激が強い場合は低めの設定から。</div>
-<div class="bodypart"><b>腕・脚</b><br>広い部位は連続照射・スピード機能が便利。照射漏れを減らす。</div>
-<div class="bodypart"><b>VIO</b><br>対応範囲がメーカー・型番で異なるため、専用ヘッドと禁止部位を確認。</div>
-</div>
+  <h2>4. 使い方4ステップ</h2>
+  <div class="flow">
+    <div class="mini"><b>STEP 1 準備</b><br>毛を短く整え、肌を清潔にします。<br><span class="tag">シェービング</span></div>
+    <div class="mini"><b>STEP 2 設定</b><br>肌状態に合わせてレベルを選択。<br><span class="tag">低めから</span></div>
+    <div class="mini"><b>STEP 3 照射</b><br>肌に密着させて、照射漏れを減らす。<br><span class="tag">密着</span></div>
+    <div class="mini"><b>STEP 4 保湿</b><br>照射後は肌を保湿してケア。<br><span class="tag">保湿</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>5. 部位別ガイド</h2>
+  <div class="bodygrid">
+    <img src="body_guide.svg" alt="部位別ガイド図解" class="body-img">
+    <div class="grid2">
+      <div class="mini"><b>顔</b><br>顔対応の有無と専用アタッチメントを確認。目の周りなど禁止部位に注意。</div>
+      <div class="mini"><b>ワキ</b><br>毛が太く刺激を感じやすい部位。冷却や低めのレベルから案内。</div>
+      <div class="mini"><b>腕・脚</b><br>広い部位は連続照射やスピード機能が便利。照射漏れを減らしやすい。</div>
+      <div class="mini"><b>VIO</b><br>対応範囲が型番で異なるため、専用ヘッドと禁止部位を必ず確認。</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>6. 効果実感の目安</h2>
+  <div class="grid4">
+    <div class="mini"><b>1〜4週間</b><br>週1回目安。毛が伸びるスピード変化を感じ始めやすい。</div>
+    <div class="mini"><b>5〜8週間</b><br>週1回目安。ムダ毛が細く・薄く感じやすい。</div>
+    <div class="mini"><b>2〜3か月</b><br>週1〜2回目安。自己処理の回数が減りやすい。</div>
+    <div class="mini"><b>3か月以降</b><br>2週間に1回目安。つるすべ感の維持ケアへ。</div>
+  </div>
 </section>
 
 <section class="section" id="talk">
-<h2>5. 接客トーク例</h2>
-<div class="talk">
-<div class="card"><b>痛みが心配</b><br>「刺激が気になるなら、まず冷却機能の有無から比べると分かりやすいです。」</div>
-<div class="card"><b>早く終わらせたい</b><br>「全身なら、連続照射の間隔や全身ケア時間の目安を比べると選びやすいです。」</div>
-<div class="card"><b>美肌も重視</b><br>「ムダ毛だけでなく、美肌ケアまでできるモデルを一緒に比べましょう。」</div>
-<div class="card"><b>男性・ヒゲ</b><br>「ヒゲ対応の有無と、太い毛へのパワー設計を確認すると失敗しにくいです。」</div>
-</div>
+  <h2>7. 接客トーク例</h2>
+  <div class="talkgrid">
+    <div class="talkbox"><b>痛みが心配なお客様へ</b><br>「刺激が気になるなら、まず冷却機能のあるタイプから比べると分かりやすいです。」</div>
+    <div class="talkbox"><b>早く終わらせたいお客様へ</b><br>「全身ケアなら、連続照射や照射時間の目安を比べると選びやすいです。」</div>
+    <div class="talkbox"><b>美肌ケアもしたいお客様へ</b><br>「ムダ毛だけでなく、うるおい感や美肌機能も一緒に見ていきましょう。」</div>
+    <div class="talkbox"><b>男性・ヒゲにも使いたいお客様へ</b><br>「ヒゲ対応の有無と、太い毛への設計を確認すると失敗しにくいです。」</div>
+    <div class="talkbox"><b>家族で使いたいお客様へ</b><br>「男女対応や、共有しやすさ、アタッチメントの種類も大事です。」</div>
+    <div class="talkbox"><b>初めてで不安なお客様へ</b><br>「自動調整タイプなら、最初に迷いにくくて選びやすいです。」</div>
+  </div>
 </section>
 
 <section class="section">
-<h2>6. 購入前チェック</h2>
-<div class="checks">
-<div class="check"><div class="n">1</div><div><b>使いたい部位に対応しているか</b><br>顔・ヒゲ・VIOは特に型番ごとの差が大きい。</div></div>
-<div class="check"><div class="n">2</div><div><b>痛み・刺激への配慮</b><br>冷却、自動調整、低出力モードなどを確認。</div></div>
-<div class="check"><div class="n">3</div><div><b>照射スピード</b><br>広い部位を短時間でやりたいか。</div></div>
-<div class="check"><div class="n">4</div><div><b>美肌機能</b><br>ムダ毛ケア以外に何を求めるか。</div></div>
-<div class="check"><div class="n">5</div><div><b>使いやすさ</b><br>重量・コード・自動調整・アタッチメント。</div></div>
-<div class="check"><div class="n">6</div><div><b>家族利用</b><br>男女対応・年齢条件・共有しやすさを確認。</div></div>
-<div class="check"><div class="n">7</div><div><b>保証・サポート</b><br>メーカー保証や案内体制まで確認。</div></div>
-</div>
+  <h2>8. 購入前チェック</h2>
+  <div class="checklist">
+    <div class="check"><div class="num">1</div><div><b>使いたい部位に対応しているか</b><br>顔・ヒゲ・VIOは型番差が大きい。</div></div>
+    <div class="check"><div class="num">2</div><div><b>痛み・刺激への配慮</b><br>冷却、自動調整、低出力モードなどを確認。</div></div>
+    <div class="check"><div class="num">3</div><div><b>照射スピード</b><br>広い部位を短時間で使いたいか。</div></div>
+    <div class="check"><div class="num">4</div><div><b>美肌機能</b><br>ムダ毛ケア以外の目的があるか。</div></div>
+    <div class="check"><div class="num">5</div><div><b>使いやすさ</b><br>重量・コード・アタッチメント・操作の簡単さ。</div></div>
+    <div class="check"><div class="num">6</div><div><b>家族利用</b><br>男女の使用可否や共有しやすさを確認。</div></div>
+    <div class="check"><div class="num">7</div><div><b>保証・サポート</b><br>メーカー保証や案内体制まで確認。</div></div>
+  </div>
 </section>
 
 <section class="section">
-<h2>7. お気に入り & 学習メモ</h2>
-<div class="memo">
-<div class="card">
-<h3>お気に入り候補</h3>
-<label><input type="checkbox"> Panasonic</label><br>
-<label><input type="checkbox"> YA-MAN</label><br>
-<label><input type="checkbox"> BRAUN</label><br>
-<label><input type="checkbox"> ReFa</label>
-</div>
-<div class="card">
-<h3>接客メモ</h3>
-<textarea id="memo" placeholder="気になったポイント、次回確認することなど"></textarea>
-<button class="btn" id="saveMemo">保存</button>
-</div>
-</div>
+  <h2>9. よくある質問</h2>
+  <div class="faqgrid">
+    <div class="faq"><b>Q. どのくらいで変化を感じますか？</b><br>A. 個人差はありますが、継続使用で自己処理頻度の変化を感じやすくなります。</div>
+    <div class="faq"><b>Q. 痛みはありますか？</b><br>A. 輪ゴムではじくような刺激を感じる場合があります。冷却機能付きは比較しやすいです。</div>
+    <div class="faq"><b>Q. 日焼けした肌でも使えますか？</b><br>A. 肌状態によっては避けるべき場合があります。必ず取扱説明書を確認します。</div>
+    <div class="faq"><b>Q. VIOやヒゲも使えますか？</b><br>A. 対応範囲は型番ごとに違うため、必ず個別確認が必要です。</div>
+  </div>
 </section>
 
 <section class="section">
-<h2>8. 安全確認</h2>
-<p class="notice">使用可能部位、使用頻度、肌色・毛色の適否、日焼け時の扱い、VIO・顔・ヒゲの範囲、防水可否などは機種ごとに異なります。接客では各メーカーの最新公式仕様・取扱説明書を優先してください。医療脱毛ではありません。</p>
+  <h2>10. お気に入り & メモ</h2>
+  <div class="memo">
+    <div class="card">
+      <h3>お気に入り候補</h3>
+      <label><input type="checkbox"> Panasonic</label><br>
+      <label><input type="checkbox"> YA-MAN</label><br>
+      <label><input type="checkbox"> BRAUN</label><br>
+      <label><input type="checkbox"> ReFa</label>
+      <div style="margin-top:10px"><span class="tag">比較したい</span><span class="tag">美肌重視</span><span class="tag">時短重視</span></div>
+    </div>
+    <div class="card">
+      <h3>接客メモ</h3>
+      <textarea id="memo" placeholder="気になったポイント、次回確認することなど"></textarea>
+      <button class="btn" id="saveMemo">保存</button>
+    </div>
+  </div>
 </section>
 
-<div class="version">光エステ販買マスター Ver. 1.1.0</div>
+<section class="section">
+  <h2>11. 安全確認</h2>
+  <div class="notice">使用可能部位、使用頻度、肌色・毛色の適否、日焼け時の扱い、VIO・顔・ヒゲの範囲、防水可否などは機種ごとに異なります。接客では各メーカーの最新公式仕様・取扱説明書を優先してください。医療脱毛ではありません。</div>
+</section>
+
+<div class="version">光エステ販買マスター Ver.1.2.0</div>
 </main>
 
 <nav>
-<a href="#home"><span>⌂</span>ホーム</a>
-<a href="#chart"><span>✿</span>お悩み</a>
-<a href="#compare"><span>▥</span>比較</a>
-<a href="#learn"><span>◎</span>図解</a>
-<a href="#talk"><span>♡</span>接客</a>
+  <a href="#home"><span>⌂</span>ホーム</a>
+  <a href="#chart"><span>✿</span>お悩み</a>
+  <a href="#compare"><span>▥</span>比較</a>
+  <a href="#learn"><span>◎</span>図解</a>
+  <a href="#talk"><span>♡</span>接客</a>
 </nav>
 </div>
 
 <script>
 const recos={
-pain:["冷却機能を最優先で比較","冷却ありでも痛みゼロとは案内しない","肌状態に合わせたレベル調整も確認"],
-speed:["連続照射・照射間隔・全身ケア時間の目安を比較","広い部位をよく使うなら時短機能が重要","速度は使用条件で変わる点も案内"],
-beauty:["美肌ケア機能の有無を比較","ムダ毛ケア以外の美容目的を聞く","美肌機能の内容はモデルごとに確認"],
-men:["ヒゲ対応・太い毛への設計を確認","対応部位と使用頻度を確認","刺激対策も同時に見る"],
-beginner:["肌色検知や自動調整を比較","操作が少ない機種を優先","初回は取扱説明書どおり低めから"],
-vio:["V/I/Oのどこまで対応するか確認","専用アタッチメントの有無を確認","禁止部位はメーカーごとに違う"],
-family:["男女の使用可否を確認","年齢条件・共有しやすさを確認","照射回数の目安も比較"],
-simple:["重量・コード・アタッチメント数を比較","準備と後片付けが少ない機種を優先","必要機能を絞ると選びやすい"]
+  pain:["冷却機能を最優先で比較","冷却ありでも痛みゼロとは案内しない","肌状態に合わせたレベル調整も確認"],
+  speed:["連続照射・照射間隔・全身ケア時間の目安を比較","広い部位をよく使うなら時短機能が重要","速度は使用条件で変わる点も案内"],
+  beauty:["美肌ケア機能の有無を比較","ムダ毛ケア以外の美容目的を聞く","美肌機能の内容はモデルごとに確認"],
+  men:["ヒゲ対応・太い毛への設計を確認","対応部位と使用頻度を確認","刺激対策も同時に見る"],
+  beginner:["肌色検知や自動調整を比較","操作が少ない機種を優先","初回は取扱説明書どおり低めから"],
+  vio:["V/I/Oのどこまで対応するか確認","専用アタッチメントの有無を確認","禁止部位はメーカーごとに違う"],
+  family:["男女の使用可否を確認","年齢条件・共有しやすさを確認","照射回数の目安も比較"],
+  simple:["重量・コード・アタッチメント数を比較","準備と後片付けが少ない機種を優先","必要機能を絞ると選びやすい"]
 };
 document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{
  const r=recos[b.dataset.key],box=document.getElementById('reco');
  box.innerHTML='<h3>このお悩みなら、ここを見る</h3><ul>'+r.map(x=>'<li>'+x+'</li>').join('')+'</ul><div class="notice">この結果は接客の絞り込み用です。最終判断は型番ごとの最新公式仕様・取扱説明書で確認してください。</div>';
- box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'nearest'});
+ box.classList.add('show'); box.scrollIntoView({behavior:'smooth',block:'nearest'});
 });
 const memo=document.getElementById('memo');
-memo.value=localStorage.getItem('hikariMemo')||'';
-document.getElementById('saveMemo').onclick=()=>{localStorage.setItem('hikariMemo',memo.value);alert('メモを保存しました');};
+memo.value=localStorage.getItem('hikariMemoV120')||'';
+document.getElementById('saveMemo').onclick=()=>{localStorage.setItem('hikariMemoV120',memo.value);alert('メモを保存しました');};
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
 </script>
-</body></html>
+</body>
+</html>

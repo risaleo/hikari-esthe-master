@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 340">
+<rect width="980" height="340" rx="24" fill="#fff9fc"/>
+<text x="40" y="46" font-size="34" font-weight="700" fill="#7a2c98">IPLのしくみ</text>
+<text x="40" y="82" font-size="20" fill="#d35692">やさしく分かる5ステップ</text>
+<g transform="translate(28,112)">
+  <g transform="translate(0,0)">
+    <rect width="160" height="170" rx="20" fill="#fff" stroke="#efd3df"/>
+    <text x="20" y="28" font-size="24" fill="#7a2c98">1</text>
+    <text x="52" y="30" font-size="22" font-weight="700" fill="#7a2c98">光を照射</text>
+    <rect x="25" y="58" width="104" height="42" rx="14" fill="#f1f1f6" stroke="#ddd"/>
+    <path d="M98 95l18 40" stroke="#ffd765" stroke-width="8" stroke-linecap="round"/>
+    <path d="M74 95l8 40" stroke="#ffd765" stroke-width="6" stroke-linecap="round"/>
+    <path d="M52 95l-2 40" stroke="#ffd765" stroke-width="5" stroke-linecap="round"/>
+    <text x="80" y="145" text-anchor="middle" font-size="16" fill="#6d6270">IPL光を肌へ</text>
+  </g>
+  <g transform="translate(190,0)">
+    <rect width="160" height="170" rx="20" fill="#fff" stroke="#efd3df"/>
+    <text x="20" y="28" font-size="24" fill="#7a2c98">2</text>
+    <text x="52" y="30" font-size="22" font-weight="700" fill="#7a2c98">黒い色に反応</text>
+    <rect x="18" y="70" width="124" height="60" rx="18" fill="#f8d3bf"/>
+    <path d="M50 130c0-46 38-74 22-108" fill="none" stroke="#2f221d" stroke-width="6"/>
+    <path d="M90 130c0-40 30-62 18-96" fill="none" stroke="#7d5639" stroke-width="6"/>
+    <text x="80" y="145" text-anchor="middle" font-size="16" fill="#6d6270">メラニンへ</text>
+  </g>
+  <g transform="translate(380,0)">
+    <rect width="160" height="170" rx="20" fill="#fff" stroke="#efd3df"/>
+    <text x="20" y="28" font-size="24" fill="#7a2c98">3</text>
+    <text x="52" y="30" font-size="22" font-weight="700" fill="#7a2c98">熱エネルギー</text>
+    <circle cx="80" cy="96" r="44" fill="#ffe2a6"/>
+    <text x="80" y="104" text-anchor="middle" font-size="40">♨️</text>
+    <text x="80" y="145" text-anchor="middle" font-size="16" fill="#6d6270">毛へアプローチ</text>
+  </g>
+  <g transform="translate(570,0)">
+    <rect width="160" height="170" rx="20" fill="#fff" stroke="#efd3df"/>
+    <text x="20" y="28" font-size="24" fill="#7a2c98">4</text>
+    <text x="52" y="30" font-size="22" font-weight="700" fill="#7a2c98">継続ケア</text>
+    <rect x="24" y="58" width="110" height="82" rx="18" fill="#f3e8ff"/>
+    <line x1="42" y1="90" x2="118" y2="90" stroke="#b48bdf" stroke-width="4"/>
+    <line x1="42" y1="114" x2="118" y2="114" stroke="#b48bdf" stroke-width="4"/>
+    <circle cx="112" cy="68" r="10" fill="#ef6fa6"/>
+    <text x="80" y="145" text-anchor="middle" font-size="16" fill="#6d6270">定期的に使用</text>
+  </g>
+  <g transform="translate(760,0)">
+    <rect width="160" height="170" rx="20" fill="#fff" stroke="#efd3df"/>
+    <text x="20" y="28" font-size="24" fill="#7a2c98">5</text>
+    <text x="52" y="30" font-size="22" font-weight="700" fill="#7a2c98">つるすべ感</text>
+    <path d="M60 126c20-66 74-74 82-20-2 22-28 36-50 36-16 0-32-8-32-16z" fill="#fde4c8"/>
+    <text x="80" y="72" text-anchor="middle" font-size="34">✨</text>
+    <text x="80" y="145" text-anchor="middle" font-size="16" fill="#6d6270">目立ちにくく</text>
+  </g>
+</g>
+</svg>

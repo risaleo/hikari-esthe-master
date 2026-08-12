@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 780">
+<rect width="620" height="780" rx="24" fill="#fffafc"/>
+<text x="36" y="50" font-size="34" font-weight="700" fill="#7a2c98">部位別ガイド</text>
+<text x="36" y="86" font-size="20" fill="#d45893">気になる部位を見せながら説明</text>
+<g transform="translate(220,120)">
+  <circle cx="90" cy="52" r="42" fill="#f7d5c2"/>
+  <path d="M58 54c2-37 24-58 51-58 20 0 36 12 40 31-15-7-30-10-42-6-21 8-28 18-49 33z" fill="#7d4a3d"/>
+  <circle cx="76" cy="54" r="4.5" fill="#5d372e"/><circle cx="106" cy="54" r="4.5" fill="#5d372e"/>
+  <path d="M76 74c8 6 19 6 27 0" fill="none" stroke="#d1819e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M65 96c-28 8-46 38-52 84-10 78 3 138 4 214h145c1-76 14-136 4-214-6-46-24-76-52-84z" fill="#f8edf1" stroke="#e1bcc9"/>
+  <path d="M11 174c-22 28-40 78-42 118" fill="none" stroke="#f7d5c2" stroke-width="20" stroke-linecap="round"/>
+  <path d="M169 174c22 28 40 78 42 118" fill="none" stroke="#f7d5c2" stroke-width="20" stroke-linecap="round"/>
+  <path d="M61 394c-6 88-34 154-36 224" fill="none" stroke="#f7d5c2" stroke-width="22" stroke-linecap="round"/>
+  <path d="M119 394c6 88 34 154 36 224" fill="none" stroke="#f7d5c2" stroke-width="22" stroke-linecap="round"/>
+  <path d="M47 628q20 22 44 0" fill="none" stroke="#d5a18d" stroke-width="5"/>
+  <path d="M125 628q20 22 44 0" fill="none" stroke="#d5a18d" stroke-width="5"/>
+</g>
+<g font-size="24" font-weight="700" fill="#7a2c98">
+  <line x1="132" y1="170" x2="220" y2="170" stroke="#d96fa6" stroke-width="4"/><text x="40" y="176">顔</text>
+  <line x1="486" y1="222" x2="406" y2="222" stroke="#8e80d9" stroke-width="4"/><text x="498" y="228">ワキ</text>
+  <line x1="106" y1="360" x2="220" y2="360" stroke="#ecad52" stroke-width="4"/><text x="36" y="366">腕</text>
+  <line x1="496" y1="458" x2="408" y2="458" stroke="#db83b6" stroke-width="4"/><text x="506" y="464">VIO</text>
+  <line x1="110" y1="626" x2="220" y2="626" stroke="#73b5d5" stroke-width="4"/><text x="38" y="632">脚</text>
+</g>
+<g fill="#fff" stroke="#efd3df">
+  <rect x="24" y="110" width="134" height="54" rx="16"/><rect x="462" y="162" width="134" height="54" rx="16"/>
+  <rect x="24" y="302" width="134" height="54" rx="16"/><rect x="462" y="430" width="134" height="54" rx="16"/>
+  <rect x="24" y="570" width="134" height="54" rx="16"/>
+</g>
+<g font-size="16" fill="#6e6270">
+  <text x="34" y="134">顔対応の可否を</text><text x="34" y="156">型番ごとに確認</text>
+  <text x="472" y="186">刺激を感じやすい</text><text x="472" y="208">ので冷却も比較</text>
+  <text x="34" y="326">広い部位は</text><text x="34" y="348">時短機能が便利</text>
+  <text x="472" y="454">専用ヘッドと</text><text x="472" y="476">禁止部位確認</text>
+  <text x="34" y="594">連続照射で</text><text x="34" y="616">ケアしやすい</text>
+</g>
+</svg>
