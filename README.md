@@ -1,22 +1,24 @@
-# 光エステ販買マスター Ver.1.0.0
+# 光エステ販買マスター Ver.1.1.0
 
-GitHub Pages向けの静的PWAです。
+リポジトリ名: hikari-esthe-master
 
-## アップロードするもの
-このフォルダの中身を、リポジトリの一番上（root）へそのままアップロードしてください。
-- index.html
-- manifest.webmanifest
-- sw.js
-- icon.svg
-- nojima_lineup.jpeg
+## 特徴
+- 送付された売場写真は未使用
+- 華やかなピンク×パープルデザイン
+- 図解・アイコン中心
+- お悩み別チャート
+- メーカー比較
+- IPL図解
+- 部位別ガイド
+- 接客トーク
+- 購入前チェック
+- お気に入り・学習メモ
+- iPhone / iPad向けレスポンシブ
+- PWA対応、ホーム画面アイコンあり
 
 ## GitHub Pages
-Settings → Pages → Deploy from a branch → main / root を選択。
+ZIPを解凍し、中身4ファイルをリポジトリ直下へアップロードしてください。
+Settings → Pages → Deploy from a branch → main / root
 
-## 内容
-- 縦スクロール中心（iPhone / iPad対応）
-- 接客用お悩み別チャート
-- メーカー・機種比較
-- IPL図解
-- 接客フロー
-- ホーム画面追加対応
+公開URLの例:
+https://risaleo.github.io/hikari-esthe-master/
